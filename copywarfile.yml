@@ -1,0 +1,9 @@
+---
+- hosts: all
+  become: true
+  tasks:
+  - name: Create a file with static content
+    copy:
+      src: /var/lib/jenkins/workspace/hello/gameoflife-web/target
+      dest: /opt/apache-tomcat-8.5.34/webapps
+  
